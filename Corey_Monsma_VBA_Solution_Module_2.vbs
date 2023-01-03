@@ -1,3 +1,11 @@
+'sources https://learn.microsoft.com/en-us/office/vba/language/concepts/getting-started/calling-sub-and-function-procedures
+'Source Class material
+Sub Main()
+' The main subroutine that does the work. I know this is very C++ and 1990s like me
+   Call processWorkSheet
+   Call getHighestLowest
+End Sub
+
 Sub processWorkSheet()
 
 For Each ws In Worksheets
@@ -45,7 +53,6 @@ CounterOpen = 0
 openAmount = 0
 
 'Like the census exercise in class get the amount of records in the dataset
-'Set thisDataSet = Worksheets("Sheet2")
 lastRow = ws.Cells(Rows.Count, "A").End(xlUp).Row
 
 'Increment through the list and count the total volume individual stocks
@@ -119,7 +126,6 @@ Dim HTicker As String
 Dim LTicker As String
 Dim TotalStocks As LongLong
 
-
 TotalStocks = 0
 
 Dim LargestV As LongLong
@@ -168,7 +174,6 @@ Next i
 ws.Range("O2").Cells.Value = "Greatest % Increase"
 ws.Range("O3").Cells.Value = "Greatest % Decrease"
 ws.Range("O4").Cells.Value = "Greatest tota Volume"
-
 
 ws.Range("Q1").Cells.Value = "Volume"
 ws.Range("P1").Cells.Value = "Ticker"
